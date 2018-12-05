@@ -1,0 +1,31 @@
+{
+	"name": "wanted",
+	"version": "1.0.0",
+	"description": "simple project",
+	"main": "src/server.js",
+	"scripts": {
+		"start": "nodemon src/server.js"
+	},
+	"keywords": [],
+	"author": "HM",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"cookie-parser": "^1.4.3",
+		"csurf": "^1.9.0",
+		"dateformat": "^3.0.3",
+		"ejs": "^2.6.1",
+		"express": "^4.16.4",
+		"express-flash": "^0.0.2",
+		"express-layout": "^0.1.0",
+		"express-session": "^1.15.6",
+		"express-validator": "^4.3.0",
+		"helmet": "^3.10.0",
+		"mongoose": "^4.13.17",
+		"multer": "^1.3.0",
+		"path": "^0.12.7"
+	},
+	"devDependencies": {
+		"nodemon": "^1.18.7"
+	}
+}

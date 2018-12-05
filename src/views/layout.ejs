@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FlightSearch Website</title>
+	<link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+	<link href="/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/styles.css" rel="stylesheet" type="text/css">
+	<link href="/css/checkbox.css" rel="stylesheet" type="text/css">
+	<link href="/css/radio.css" rel="stylesheet" type="text/css">
+	<link href="/css/title.css" rel="stylesheet" type="text/css">
+	<link href="/css/menu.css" rel="stylesheet" type="text/css">
+	<link href="/css/form.css" rel="stylesheet" type="text/css">
+	<link href="/css/select.css" rel="stylesheet" type="text/css">
+
+	<link href="/jquery/jquery-ui.css" rel="stylesheet" type="text/css">
+	<script src="/jquery/jquery-1.12.4.js"></script>
+	<script src="/jquery/jquery-3.3.1.min.js"></script>
+	<script src="/jquery/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			document.getElementById("departdate").placeholder = 'Select Depart Date';
+			document.getElementById("returndate").placeholder = 'Select Return Date';
+			$("li").click(function(){
+				$("li").removeClass("active");
+				$(this).addClass("active");
+			});
+		});
+		$( function() {
+			$("#departdate").datepicker();
+			$("#returndate").datepicker();
+		} );
+	</script>
+</head>
+<body>
+<%- body %>
+</body>
+</html>

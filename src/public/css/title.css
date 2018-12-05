@@ -1,0 +1,24 @@
+#title_div {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+	padding-top: 80px;
+}
+
+#title {
+	display: inline; 
+	font-size: 80px; 
+	color: #2C313E;
+}
+
+#subtitle {
+	display: block;
+	margin-top: 10px;
+    font-size: 26px;
+	color: #414141;
+}
+
+.titleplane {
+	vertical-align: middle;
+	color: white;
+}

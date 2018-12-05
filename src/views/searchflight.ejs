@@ -1,0 +1,97 @@
+<!-- views/searchflight.ejs -->
+<div id="title_div">
+	<h1 id="title">Cheapflights <i class="titleplane fas fa-plane"></i></h1>
+	<span id="subtitle">Smart search. Made simple.</span>
+</div>
+
+<div id="menu_div">
+	<ul>
+	  <li class="active"><i class="graycolor fas fa-plane-departure"></i><a href="#">Flights</a><span class="borderspan">|</span></li>
+	  <li><i class="graycolor fas fa-bed"></i><a href="#">Hotels</a><span class="borderspan">|</span></li>
+	  <li><i class="graycolor fas fa-car-side"></i><a href="#">Cars</a><span class="borderspan">|</span></li>
+	  <li><i class="graycolor fas fa-money-check-alt"></i><a href="#">Vacation deals</a><i class="graycolor fas fa-angle-right"></i></li>
+	</ul>
+</div>
+
+<% if (!(Object.keys(errors).length === 0)) { %>
+<div class="errors-list">
+  <% if (Object.keys(errors).length === 0) { %>
+  <% } else { %>
+      <% Object.values(errors).forEach(error => { %>
+        - <%= error.msg %></br>
+      <% }) %>
+  <% } %>
+</div>
+<% } %>
+
+<div id="form_div">
+	<form method="post" action="/searchflight?_csrf=<%= csrfToken %>" novalidate>
+		<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+		<table style="width: 100%; border: 0;">
+			<tr style="width: 100%">
+				<td style="width:47%"><div class="wrapper">
+					<div class="fromtodiv"><label for="fromcity" class="padleft10 labelfontrow1">From</label></div>
+					<input class="city" id="fromcity" name="fromcity" type="text" placeholder="Enter city or airport" value="<%= data.fromcity %>" />
+				</div></td>
+				<td style="width:6%"><i class="exchange_icon fas fa-exchange-alt"></i></td>
+				<td style="width:47%"><div class="wrapper">
+					<div class="fromtodiv"><label for="tocity" class="padleft10 labelfontrow1">To</label></div>
+					<input class="city" id="tocity" name="tocity" type="text" placeholder="Enter city or airport" value="<%= data.tocity %>" />
+				</div></td>
+			</tr>
+			<tr style="height: 40px;">
+				<td colspan="3">
+					<label class="containerradio">
+						<input type="radio" name="triptype" checked="checked" required>Round-trip
+						<span class="checkmarkradio"></span>
+					</label>
+					<label class="containerradio">
+						<input type="radio" name="triptype" required>One-way
+						<span class="checkmarkradio"></span>
+					</label>
+					<label class="containerradio">
+						<input type="radio" name="triptype" required>Multi-city
+						<span class="checkmarkradio"></span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td><div class="wrapper">
+					<div style="width: 49%; display: inline-block;">
+						<i class="calander_icon padleft5 far fa-calendar-alt"></i><label for="departdate" class="labelfontrow3 padleft5">Depart</label>
+						<p style="display: inline-block; margin: 0; width: 58%;">
+							<input readonly="readonly" class="date" id="departdate" name="departdate" type="text" value="<%= data.departdate %>" />
+						</p>
+					</div>
+					<div style="width: 49%; display: inline-block;">
+						<i class="calander_icon padleft5 far fa-calendar-alt"></i><label for="returndate" class="labelfontrow3 padleft5">Return</label>
+						<p style="display: inline-block; margin: 0; width: 58%;">
+							<input readonly="readonly" class="date" id="returndate" name="returndate" type="text" value="<%= data.departdate %>" />
+						</p>
+					</div>
+				</div></td>
+				<td><i style="display: none;" class="exchange_icon fas fa-exchange-alt"></i></td>
+				<td><div class="wrapper">
+					<label class="wrap">
+					<select name="passengerandclass" class="dropdown">
+						<option value="1">1 adult, Economy</option>
+						<option value="2">2 adult, Economy</option>
+						<option value="3">1 adult, A Class</option>
+					</select>
+					</label>
+				</div></td>
+			</tr>
+			<tr style="height: 100px; vertical-align: bottom;">
+				<td colspan="3"><button class="formbutton" type="submit">Search flights</button></td>
+			</tr>				
+			<tr style="height: 40px; padding-bottom: 40px;">
+				<td colspan="3">
+					<label class="containercheckbox">
+						<input type="checkbox" name="newletter">Receive our travel deals newsletter
+						<span class="checkmarkcheckbox"></span>
+					</label>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>

@@ -1,0 +1,56 @@
+/* The container */
+.containercheckbox {
+	float: left;
+    position: relative;
+    padding-left: 20px;
+	padding-right: 8px;
+    cursor: pointer;
+    color: #606060;
+	font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.containercheckbox input {
+    position: absolute;
+    cursor: pointer;
+	opacity: 0;
+}
+
+.checkmarkcheckbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+	background-color: transparent;
+	border: solid 1px;
+}
+
+.containercheckbox:hover input ~ .checkmarkcheckbox  {
+    background-color: white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmarkcheckbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containercheckbox input:checked ~ .checkmarkcheckbox:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containercheckbox .checkmarkcheckbox:after {
+ 	top: 2px;
+	left: 2px;
+	width: 8px;
+	height: 8px;
+	background: black;
+}

@@ -1,0 +1,27 @@
+<!-- views/index.ejs -->
+<% if (messages.success) { %>
+  <div class="successdiv">
+	<b>SUCCESSFULL</b>
+	<br/>
+	<%= messages.success %>
+	<br/>
+	<%= messages.detail %>
+  </div>
+<% } %>
+
+<h1>Welcome to Hamed Mirzaei's Node.js based Flight Search Website.</h1>
+
+<table class="designtable">
+	<tr>
+		<td>
+			This is implemented using Node.js, MongoDB, JQuery, FontAwesome and CSS<br/>
+			You should have MongoDB and Node.js installed on your system <br/>
+			To make it work, first execute <i style="color: #009">"npm install"</i> and then <i style="color: #009">"npm start"</i> in the root directory <br/>
+			A database with name <i style="color: #009">"flight_database"</i> will be created on MongoDB <br/>
+			Search flight form do works. It accepts inouts, validate them on some simple criteria and then post and save them on MongoDB <br/>
+			CSRF Token has been used to increase security <br/>
+		</td>
+	</tr>
+</table>
+
+<button class="gotobutton" onclick="location.href='/searchflight';">Go to SearchFlights page</button>

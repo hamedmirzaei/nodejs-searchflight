@@ -1,0 +1,117 @@
+#form_div {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+}
+
+input[type=text].city {
+    color: #2C313E;
+    height: 45px;
+    padding-left: 5px;
+    text-decoration: none;
+    background-color:white;
+    border:0;
+	font-size: 14px;
+	font-weight: bold;
+	width: 83%;
+}
+
+input[type=text].city:focus{
+    outline: none;
+}
+
+/* Change the white to any color ;) */
+input[type=text].city:-webkit-autofill,
+input[type=text].city:-webkit-autofill:hover, 
+input[type=text].city:-webkit-autofill:focus, 
+input[type=text].city:-webkit-autofill:active,
+textarea:-webkit-autofill,
+select:-webkit-autofill  {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+input[type=text].date {
+    color: #666;
+    height: 45px;
+    padding-left: 5px;
+    text-decoration: none;
+    background-color:white;
+    border:0;
+	font-size: 12px;
+	width: 100%;
+}
+
+input[type=text].date:focus{
+    outline: none;
+}
+
+.padleft10 {
+	padding-left: 10px;
+}
+
+.padleft5 {
+	padding-left: 5px;
+}
+
+.labelfontrow1 {
+	color: #606060;
+	font-size: 14px;
+}
+
+.labelfontrow3 {
+	color: #555;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.fromtodiv {
+	display: inline-block;
+}
+
+.wrapper{
+	background-color:white;  
+	height:47px;
+}
+
+.exchange_icon {
+	color: white;
+	text-align: center;
+	width: 100%;
+	cursor: pointer;
+}
+
+.calander_icon {
+	color: #606060;
+}
+
+.formbutton {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	background-color: #2C313E;
+	width: 40%;
+    height: 40px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	box-shadow: 0px 2px 3px grey;
+	-moz-box-shadow: 0px 2px 3px grey;
+	-webkit-box-shadow: 0px 2px 3px grey;
+}
+
+.formbutton:hover {
+	background-color: #111;
+}
+
+.errors-list {
+  font-size: 14px;
+  color: #C00;
+  margin-left: 2px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px 25px 15px 25px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
