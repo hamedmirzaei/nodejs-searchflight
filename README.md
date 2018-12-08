@@ -1,5 +1,5 @@
 # nodejs-searchflight
-This is a simple example to show how to connect *Node.js*, *MongoDB*, *JQuery*, *FontAwesome*, CSS, HTML and JavaScript together.
+This is a simple example to show how to connect *Node.js*, *Express*, *MongoDB*, *JQuery*, *FontAwesome*, CSS, HTML and JavaScript together.
 
 ## Requirements
 You should have *Node.js* installed on your system.
